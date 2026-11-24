@@ -1,0 +1,6 @@
+dotmemo, the notebook that reads between the lines.
+Write freely. Keep notes, tasks and calculations together.
+Write naturally, just like on paper, with no syntax to learn.
+Jot down a payment, adjust a total, and develop your ideas.
+Let dotmemo figure out the rest.
+total = 2400 + 600 | discount = total - 10% | share = 900

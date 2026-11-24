@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>__FAMILY__ - local specimen</title>
+  <style>
+    @font-face{font-family:mijote;src:url(data:font/woff2;base64,__FONT_DATA__) format('woff2');font-weight:800;font-style:normal;font-display:block}
+    *{box-sizing:border-box}body{margin:0;background:#f5f0e6;color:#1d382f;font:16px/1.6 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:36px}header{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #c7c9bb;padding-bottom:15px;font-size:12px;letter-spacing:.1em}.sample{font-family:mijote,sans-serif;font-weight:800;font-synthesis:none;font-kerning:normal}h1{font-size:clamp(58px,10vw,126px);line-height:1.4;margin:25px 0 0}.intro{max-width:750px}h2{font-size:18px}a{color:inherit}p{margin:14px 0}.controls{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin:28px 0}textarea{width:100%;min-height:170px;padding:12px;border:1px solid #9daba0;background:transparent;border-radius:6px;color:inherit;font:16px/1.6 system-ui}label{display:block;font-size:14px}input,select{width:100%;accent-color:#1d382f}select{padding:8px;margin-top:6px;background:transparent;color:inherit;border:1px solid #9daba0}.buttons{display:flex;gap:10px;flex-wrap:wrap}button{font:14px system-ui;border:1px solid #9daba0;border-radius:24px;background:transparent;color:inherit;padding:9px 16px;cursor:pointer}button[aria-pressed=true]{color:#f5f0e6;background:#1d382f}:focus-visible{outline:3px solid #a94d20;outline-offset:4px}#notice{min-height:26px;color:#8c350f}#stage{border-block:1px solid #aeb6a9;padding:25px 15px;min-height:250px;overflow-wrap:anywhere;overflow-x:auto}#stage.dark{background:#1d382f;color:#f5f0e6}#preview{font-size:72px;line-height:1.7;white-space:pre-wrap}.sizes{overflow-x:auto;margin:35px 0}.size{display:flex;gap:25px;align-items:baseline;min-width:max-content}.size small{font:12px system-ui;min-width:35px}.inventory{font-size:44px;line-height:1.8;word-break:break-all}.board{display:block;width:100%;max-width:800px;height:auto;margin:30px auto}summary{cursor:pointer;padding:12px 0}footer{border-top:1px solid #c7c9bb;font-size:13px;margin-top:40px;padding-top:20px}pre{white-space:pre-wrap}.muted{color:#54685d}#notice:empty::after{content:'All input characters are in the current repertoire.';color:#54685d}@media(max-width:700px){main{padding:20px 16px}.controls{grid-template-columns:1fr}header{font-size:10px}#preview{font-size:48px}}@media print{.controls,.buttons{display:none}main{padding:0}#stage{border:0}.sample{color:#1d382f!important;background:white!important}}
+  </style>
+</head>
+<body><main>
+  <header><strong>DOTMEMO MIJOTE</strong><span>UNRELEASED · __STYLE__ · __VERSION__</span></header>
+  <h1 class="sample">dotmemo mijote</h1>
+  <p class="intro">__EN_TITLE__</p>
+  <p class="muted">225 mapped codepoints · weight 800 · approximately 6° forward slant · proportional spacing. </p>
+  <div class="controls">
+    <label for="entry">Your text<textarea id="entry" spellcheck="false">__ENGLISH__</textarea></label>
+    <div>
+      <label for="size">Size <output id="sizeval">72 px</output><input id="size" type="range" min="14" max="160" value="72"></label>
+      <label for="track">Letter spacing <output id="trackval">0 em</output><input id="track" type="range" min="-20" max="100" value="0"></label>
+      <label for="normalization">Unicode normalization<select id="normalization"><option value="none">As typed (no normalization)</option><option value="NFC">NFC</option><option value="NFD">NFD</option></select></label>
+    </div>
+  </div>
+  <div class="buttons">
+    <button id="english">English text</button><button id="french">French text</button>
+    <button data-text="0123456789 - 69 96 99 1999 - 9 q g - I l 1 - O 0">Confusable forms</button>
+    <button data-text="€ £ ¥ ¢ $ - ø Ø ð þ Þ µ - æ œ Æ Œ © ®">Joins and symbols</button>
+    <button data-text="à â ä ç é è ê ë î ï ô ö ù û ü ÿ - ḿ - ã - ç">Combining marks</button>
+    <button id="inverse" aria-pressed="false">Dark background</button>
+    <button id="kern" aria-pressed="true">Kerning on</button>
+  </div>
+  <p id="notice" role="status" aria-live="polite"></p>
+  <div id="stage"><div id="preview" class="sample"></div></div>
+  <section class="sizes" aria-label="Size comparison">
+    <h2>Reading sizes</h2>
+    <div class="size"><small>72 px</small><span class="sample" style="font-size:72px">__EN_TITLE__</span></div>
+    <div class="size"><small>48 px</small><span class="sample" style="font-size:48px">__FR_TITLE__</span></div>
+    <div class="size"><small>32 px</small><span class="sample" style="font-size:32px">__FR_NOTE__</span></div>
+    <div class="size"><small>24 px</small><span class="sample" style="font-size:24px">__EN_NOTE__</span></div>
+    <div class="size"><small>16 px</small><span class="sample" style="font-size:16px">__CALCULATION__</span></div>
+  </section>
+  <details><summary>Current character repertoire</summary><div class="sample inventory">__CHARACTERS__</div><p><a href="coverage.csv">Codepoint inventory (CSV)</a></p></details>
+  <details><summary>Outline specimen</summary><img class="board" src="specimen.svg" alt="Outline proof of words, figures and symbols"></details>
+  <footer><p>Missing characters may use a system fallback; this does not mean the font supports their language. The font has no mark-to-mark stacking yet.</p><p>Text entered here stays in your browser.</p></footer>
+  <template id="english-text">__ENGLISH__</template><template id="french-text">__FRENCH__</template>
+</main><script>
+  const supported = new Set(__SUPPORTED__);
+  const $ = id => document.getElementById(id);
+  function update() {
+    const mode = $('normalization').value;
+    const text = mode === 'none' ? $('entry').value : $('entry').value.normalize(mode);
+    const missing = [...new Set([...text].filter(c => !supported.has(c) && !['\n','\r','\t'].includes(c)))];
+    $('notice').textContent = missing.length ? 'Unsupported: ' + missing.map(c => c + ' (U+' + c.codePointAt(0).toString(16).toUpperCase().padStart(4,'0') + ')').join(', ') : '';
+    $('preview').textContent = text;
+    $('preview').style.fontSize = $('size').value + 'px';
+    $('preview').style.letterSpacing = Number($('track').value) / 1000 + 'em';
+    $('sizeval').value = $('size').value + ' px';
+    $('trackval').value = Number($('track').value) / 1000 + ' em';
+  }
+  ['entry','size','track','normalization'].forEach(id => $(id).addEventListener('input',update));
+  document.querySelectorAll('[data-text]').forEach(button => button.onclick = () => {$('entry').value = button.dataset.text;update();});
+  ['english','french'].forEach(id => $(id).onclick = () => {$('entry').value = $(id + '-text').content.textContent.trim();update();});
+  $('inverse').onclick = () => $('inverse').setAttribute('aria-pressed',String($('stage').classList.toggle('dark')));
+  $('kern').onclick = () => {const active = $('kern').getAttribute('aria-pressed') !== 'true';$('kern').setAttribute('aria-pressed',String(active));$('kern').textContent = active ? 'Kerning on' : 'Kerning off';$('preview').style.fontKerning = active ? 'normal' : 'none';};
+  update();
+</script></body></html>

@@ -1,0 +1,28 @@
+name: Glyph or rendering defect
+description: Report a drawing, spacing, shaping or rendering problem.
+title: "[Glyph] "
+body:
+  - type: textarea
+    id: characters
+    attributes:
+      label: Characters and exact text
+      description: Include Unicode codepoints where possible. Use a non-private example.
+    validations:
+      required: true
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected and observed result
+      description: Include related accents, derived forms and a screenshot if useful.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Font version, style, application, OS and size
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language, script and orthography

@@ -1,0 +1,6 @@
+dotmemo, le cahier qui lit entre les lignes.
+Écrivez librement. Notes, tâches et calculs dans le même cahier.
+Écrivez naturellement, comme sur papier, sans syntaxe à apprendre.
+Notez un paiement, ajustez un total, poursuivez vos idées.
+Laissez dotmemo comprendre le reste.
+total = 2400 + 600 | remise = total - 10% | part = 900

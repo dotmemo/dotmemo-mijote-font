@@ -1,0 +1,20 @@
+[font]
+family = "dotmemo mijote"
+style = "Bold"
+postscript_name = "dotmemoMijote-Bold"
+file_stem = "dotmemo-mijote-Bold"
+version = "0.100"
+weight = 800
+fs_type = 0
+copyright = "Copyright (c) 2026 Dotclic"
+license_description = "This Font Software is licensed under the SIL Open Font License, Version 1.1. No Reserved Font Names are declared. See OFL.txt."
+license_url = "https://openfontlicense.org"
+
+[release]
+status = "unreleased"
+copyright_holder = "Dotclic"
+font_license = "OFL-1.1"
+code_license = "MIT"
+font_license_file = "OFL.txt"
+code_license_file = "LICENSE-MIT"
+embedding_reviewed = true

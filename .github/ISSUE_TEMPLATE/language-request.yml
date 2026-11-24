@@ -1,0 +1,22 @@
+name: Language or orthography support
+description: Propose a specific orthography and its validation evidence.
+title: "[Language] "
+body:
+  - type: input
+    id: identity
+    attributes:
+      label: Language, variety, script and orthography
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Sources, required letters and combining sequences
+      description: Link authoritative orthography references and describe actual use.
+    validations:
+      required: true
+  - type: textarea
+    id: review
+    attributes:
+      label: Corpus, permissions and reader review
+      description: Identify reusable examples and how review could be organized.
